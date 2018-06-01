@@ -1,0 +1,13 @@
+{
+    "name": "muglug/wordpress-analysis",
+    "description": "Provides analysis for WordPress",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Matt Brown",
+            "email": "github@muglug.com"
+        }
+    ],
+    "require": {}
+}

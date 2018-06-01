@@ -4,6 +4,7 @@
     autoloader="bootstrap.php"
     useDocblockTypes="true"
     totallyTyped="false"
+    hoistConstants="true"
 >
     <projectFiles>
         <file name="src/index.php" />
