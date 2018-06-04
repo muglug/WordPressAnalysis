@@ -1,6 +1,7 @@
 # Type-checking WordPress with Psalm
 
-To install all the necessary dependencies, run
+To install all the necessary dependencies, you must first have [Composer](https://getcomposer.org). Once that's installed, run
+
 ```
 git clone https://github.com/muglug/WordPressAnalysis
 cd WordPressAnalysis
