@@ -9,5 +9,7 @@
             "email": "github@muglug.com"
         }
     ],
-    "require": {}
+    "require": {
+        "vimeo/psalm": ">=2.0.2"
+    }
 }
