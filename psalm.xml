@@ -100,5 +100,13 @@
         <TypeDoesNotContainNull errorLevel="info" />
         <MissingDocblockType errorLevel="info" />
         <ImplementedReturnTypeMismatch errorLevel="info" />
+
+        <InvalidClass errorLevel="info" />
+
+        <UndefinedClass>
+            <errorLevel type="suppress">
+                <referencedClass name="Imagick" />
+            </errorLevel>
+        </UndefinedClass>
     </issueHandlers>
 </psalm>

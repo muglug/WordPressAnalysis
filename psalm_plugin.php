@@ -64,5 +64,41 @@ class WordPressFunctions extends \Psalm\Plugin
                 return;
             }
         }
+
+        if ($function_id === 'get_term') {
+            if (count($args) < 3
+                || ($args[2]->value instanceof PhpParser\Node\Expr\ConstFetch
+                    && $args[2]->value->name->parts[0] === 'OBJECT')
+            ) {
+                $return_type_candidate = \Psalm\Type::parseString('WP_Term|null');
+                return;
+            }
+
+            if ($args[2]->value instanceof PhpParser\Node\Expr\ConstFetch
+                && ($args[2]->value->name->parts[0] === 'ARRAY_A'
+                    || $args[2]->value->name->parts[0] === 'ARRAY_N')
+            ) {
+                $return_type_candidate = \Psalm\Type::parseString('array|null');
+                return;
+            }
+        }
+
+        if ($function_id === 'get_term_by') {
+            if (count($args) < 4
+                || ($args[3]->value instanceof PhpParser\Node\Expr\ConstFetch
+                    && $args[3]->value->name->parts[0] === 'OBJECT')
+            ) {
+                $return_type_candidate = \Psalm\Type::parseString('WP_Term|null');
+                return;
+            }
+
+            if ($args[3]->value instanceof PhpParser\Node\Expr\ConstFetch
+                && ($args[3]->value->name->parts[0] === 'ARRAY_A'
+                    || $args[3]->value->name->parts[0] === 'ARRAY_N')
+            ) {
+                $return_type_candidate = \Psalm\Type::parseString('array|null');
+                return;
+            }
+        }
     }
 }
