@@ -5,6 +5,7 @@
     useDocblockTypes="true"
     totallyTyped="false"
     hoistConstants="true"
+    addParamDefaultToDocblockType="true"
 >
     <projectFiles>
         <file name="src/index.php" />
