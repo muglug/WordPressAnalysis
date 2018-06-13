@@ -115,5 +115,13 @@
                 <referencedClass name="Imagick" />
             </errorLevel>
         </UndefinedClass>
+
+        <!-- WALL OF SHAME (aka things to be fixed) -->
+        <UndefinedThisPropertyAssignment>
+            <errorLevel type="suppress">
+                <file name="src/wp-includes/pomo/streams.php" />
+                <file name="src/wp-includes/class-json.php" />
+            </errorLevel>
+        </UndefinedThisPropertyAssignment>
     </issueHandlers>
 </psalm>
