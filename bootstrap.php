@@ -2,6 +2,7 @@
 
 define( 'WPINC', 'wp-includes' );
 define( 'ABSPATH', __DIR__ . '/src/');
+require_once(ABSPATH . WPINC . '/sodium_compat/autoload.php');
 
 /**
  * Requests autoloader

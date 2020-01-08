@@ -11,6 +11,7 @@
         <file name="src/index.php" />
         <file name="src/wp-admin/index.php" />
         <ignoreFiles>
+            <directory name="vendor" />
             <file name="src/wp-includes/deprecated.php" />
             <file name="src/wp-admin/includes/deprecated.php" />
         </ignoreFiles>
