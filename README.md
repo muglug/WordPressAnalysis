@@ -14,3 +14,10 @@ To do the actual analysis, run
 ```
 ./vendor/bin/psalm
 ```
+
+If you're interested in looking for potential security vulnerabilities, you can run Psalm with the `--taint-analysis` flag:
+
+```
+./vendor/bin/psalm --taint-analysis
+```
+
