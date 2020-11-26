@@ -23,7 +23,7 @@ function is_wp_error ($thing) {
  * @param string $text The text to be escaped.
  * @return string Escaped text.
  *
- * @psalm-taint-remove html $text
+ * @psalm-taint-escape html
  */
 function esc_js( $text ) {}
 
@@ -35,9 +35,21 @@ function esc_js( $text ) {}
  * @param string $text
  * @return string
  *
- * @psalm-taint-remove html $text
+ * @psalm-taint-escape html
  */
 function esc_html( $text ) {}
+
+/**
+ * Escaping for textarea values.
+ *
+ * @since 3.1.0
+ *
+ * @param string $text
+ * @return string
+ *
+ * @psalm-taint-escape html
+ */
+function esc_textarea( $text ) {}
 
 /**
  * Escaping for HTML attributes.
@@ -47,7 +59,7 @@ function esc_html( $text ) {}
  * @param string $text
  * @return string
  *
- * @psalm-taint-remove html $text
+ * @psalm-taint-escape html
  */
 function esc_attr( $text ) {}
 
